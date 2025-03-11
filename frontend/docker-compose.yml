@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: .
+    user: "node"
+    command: npm run dev
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+
+volumes:
+  node_modules:
